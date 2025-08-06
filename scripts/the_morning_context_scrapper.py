@@ -94,13 +94,13 @@ async def main():
     # Credentials from environment variables
     email = os.getenv("GMAIL_EMAIL")
     app_password = os.getenv("GMAIL_APP_PASSWORD")
-    openai_api_key = os.getenv("GOOGLE_API_KEY")
+    google_api_key = os.getenv("GOOGLE_API_KEY")
 
     # Set globals for OTP access
     GLOBAL_EMAIL = email
     GLOBAL_APP_PASSWORD = app_password
- 
-    login = MorningContextLoginWithOTP(email, app_password, openai_api_key)
+
+    login = MorningContextLoginWithOTP(email, app_password, google_api_key)
     await login.login()
 
 if __name__ == "__main__":
